@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulated Market Orders</title>
+  <link rel="stylesheet" href="proj3css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simulated Trading Platform</h1>
+
+    <div class="price-display">
+      <p>Current Price: <span id="price">$100</span></p>
+    </div>
+
+    <div class="order-form">
+      <select id="buySellType">
+        <option value="buy">Buy</option>
+        <option value="sell">Sell</option>
+      </select>
+
+      <select id="orderType">
+        <option value="market">Market Order</option>
+        <option value="limit">Limit Order</option>
+      </select>
+
+      <input type="number" id="orderPrice" placeholder="Enter Limit Price" step="0.01">
+      <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <div class="orders">
+      <h2>Orders</h2>
+      <ul id="orderList"></ul>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <audio id="ding" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+  <script src="proj3.js"></script>
+</body>
+</html>
